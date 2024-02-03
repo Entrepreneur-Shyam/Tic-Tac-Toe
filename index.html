@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="shortcut icon" href="assets/favicon-tic-tac-toe.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gameOver.css">
+    <script src="/script/script.js" type="module" defer> </script>
+</head>
+
+<body>
+    <div class="main">
+
+        <!-- Players Input  -->
+        <div class="players-input">
+            <div class="player1 p-field">
+                <input type="text" placeholder="X Player">
+                <button type="button" onclick="handleSubmit(event)" class="player1-btn" title="player1">X</button>
+            </div>
+            <div class="player2 p-field">
+                <input type="text" placeholder="O Player">
+                <button type="button" onclick="handleSubmit(event)" class="player2-btn" title="player2">O</button>
+            </div>
+        </div>
+
+        <!-- Container for name and board -->
+        <div class="container">
+
+            <!-- Players Name -->
+
+            <div class="player-title">
+
+                <div class="player-x title">
+                    <span>X</span>
+                    <h3>Shyam</h3>
+                </div>
+
+                <div class="player-o title">
+                    <span>O</span>
+                    <h3>Lipu</h3>
+                </div>
+
+            </div>
+
+            <!-- Board -->
+            <div class="board">
+
+            </div>
+
+        </div>
+        <div class="game-over ">
+            <h2></h2>
+            <p>Shyam Won</p>
+            <button> Restart</button>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>

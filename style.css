@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #382365;
+
+    /* font-family: "Alkatra", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal; */
+
+}
+
+.main {
+    /* background: #5D3587; */
+    position: relative;
+    background: url(assets/bg-tic-tac-toe.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.players-input {
+    display: flex;
+    width: 60vmin;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: rgba(93, 53, 136, 0.4);
+    box-shadow: 0px 5px 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.players-input input {
+    font-family: "Alkatra", system-ui;
+    font-size: 1.1rem;
+    padding: 10px;
+    height: 45px;
+    width: 75%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(250, 235, 215, 0.389);
+    color: rgb(255, 255, 255);
+
+ 
+    
+}
+
+.players-input button {
+    font-family: "Alkatra", system-ui;
+    font-size: 1.3rem;
+    cursor: pointer;
+    width: 40px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    /* margin-left: 10px; */
+}
+
+.p-field{
+display: flex;
+align-items: center;
+justify-content: space-around;
+
+}
+
+.player1{
+    margin-left: 12px;
+}
+.player2{
+    margin-right: 12px;
+}
+
+.player1 button{
+    background-color: rgba(30, 160, 247, 0.76);
+    box-shadow: 2px 4px rgb(1, 72, 119);
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+    color: transparent;
+    transition: all 0.3s;
+}
+.player1 button:active{
+    box-shadow: 0px 0px rgba(30, 160, 247, 0.76);
+    transform: scale(0.9);
+
+}
+.player2 button{
+    background-color: #f7bd1ec2;
+    box-shadow: 2px 4px #966f03;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+    color: transparent;
+    transition: all 0.3s;
+    
+}
+.player2 button:active{
+    box-shadow: 0px 0px #f7bd1ec2;
+    transform: scale(0.9);
+}
+
+
+
+
+.player1 input:focus{
+    outline: none;
+    background-color:rgba(30, 160, 247, 0.76) ;
+    color: white;
+}
+.player2 input:focus{
+    outline: none;
+    background-color:#e5ab0abe ;
+    color: white;
+}
+input::placeholder{
+    color: rgb(255, 255, 255);
+}
+
+
+
+.container {
+    width: 60vmin;
+    height: 70vmin;
+    background-color: hsla(269, 44%, 37%, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0px 5px 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vmin;
+
+}
+
+.player-title {
+    font-family: "Alkatra", system-ui;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.title {
+    display: flex;
+    gap: 10px;
+}
+
+.title span {
+    font-size: 1.6rem;
+    background-color: rgba(124, 43, 223, 0.216);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 5px;
+    padding: 0 15px;
+    
+}
+.player-x span{
+    color: rgb(30, 161, 247);
+}
+.player-o span{
+    color: #f7bd1e;
+}
+.player-x h3{
+    color: #1ea1f7;
+}
+.player-o h3{
+    color: #f7bd1e;
+}
+
+
+
+
+
+.title h3 {
+    /* background-color: rgba(122, 149, 222, 0.148);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 0 15px;
+    border-radius: 5px; */
+    font-weight: 100;
+    font-size: 1.6rem;
+}
+
+
+
+
+.board {
+    width: 55vmin;
+    height: 55vmin;
+    /* background-color: rgb(250, 250, 250); */
+    /* backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); */
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+.box{
+    width:calc(100%/3 - 5px);
+    height:calc(100%/3 - 5px);
+    background-color: hsla(259, 45%, 41%, 0.6);
+    box-shadow: 0px 10px 9px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:hover{ 
+    transform: scale(1.05);
+
+   
+}
+
+.box-img{
+
+   height: 80%; 
+}
+
+@media (max-width:600px) and (max-height:2500px) {
+    
+    .main{
+        width: 95%;
+      
+    }
+    .players-input{
+        margin-top: 10px;
+       width: 100%;
+    }
+    .container{
+        width: 100%;
+        height: 90%;
+        margin-bottom: 10px;
+        justify-content: flex-start;
+    }
+    .player-title{
+      margin-top: 10%;
+    }
+    .board{
+        width: 85vmin;
+        height: 85vmin;
+        margin-top: 10%;
+    }
+}
