@@ -6,10 +6,10 @@ import { winingCondition } from "./condition.js";
 window.handleSubmit = (event) => {
     let input = event.target.previousElementSibling.value
     let parentDivClass = event.target.parentElement.className;
-    if (parentDivClass === "player1") {
+    if (parentDivClass.includes("player1")) {
         document.querySelector(".player-x h3").textContent = input;
 
-    } else if (parentDivClass === "player2") {
+    } else if (parentDivClass.includes("player2")) {
         document.querySelector(".player-o h3").textContent = input
     }
     event.target.previousElementSibling.value = ""
