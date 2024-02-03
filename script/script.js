@@ -94,7 +94,11 @@ let restartButton = document.querySelector(".game-over button")
 
 function checkWinner(result, optionX, optionY) {
     gameOver.style.transform = "scale(1)"
-    gameOver.style.top = "20%"
+        if (window.matchMedia("(max-width: 600px) and (max-height: 2500px)").matches) {
+        gameOver.style.top = "1%";
+    } else {
+        gameOver.style.top = "20%"
+    }
     gameResult.textContent = `${result}`
 
 
